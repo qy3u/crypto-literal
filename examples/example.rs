@@ -1,10 +1,3 @@
-#![feature(custom_inner_attributes)]
-#![feature(proc_macro_hygiene)]
-// #![crypto_literal::algorithm(none)]
-// #![crypto_literal::algorithm(xor)]
-#![crypto_literal::algorithm(aes)]
-#![crypto_literal::key("0123456789")]
-
 use anyhow::Result;
 use crypto_literal::{encrypt, CryptoLiteral};
 use lazy_static::lazy_static;

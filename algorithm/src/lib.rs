@@ -1,8 +1,5 @@
-use aes::Aes256;
-use ofb::{
-    stream_cipher::{NewStreamCipher, SyncStreamCipher},
-    Ofb,
-};
+use aes::{cipher::{StreamCipher, KeyIvInit}, Aes256};
+use ofb::Ofb;
 
 /// Crypto algorithm.
 #[derive(Debug, PartialEq, Eq)]
@@ -37,7 +34,7 @@ pub struct Aes {
 impl Aes {
     #[inline(always)]
     pub fn encrypt(buffer: &mut [u8], iv: &[u8], key: &[u8]) {
-        let mut cipher = Ofb::<Aes256>::new_var(key, iv).expect("create cipher (Ofb<Aes256>)");
+        let mut cipher = Ofb::<Aes256>::new(key.into(), iv.into());
         cipher.apply_keystream(buffer);
     }
 

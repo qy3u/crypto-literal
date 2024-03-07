@@ -1,5 +1,3 @@
-#![feature(proc_macro_hygiene)]
-
 use anyhow::Result;
 use crypto_literal::{algorithm::Xor, Algorithm, CryptoLiteral};
 

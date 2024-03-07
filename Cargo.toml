@@ -1,6 +1,6 @@
 [package]
 name = "crypto-literal"
-version = "0.1.2"
+version = "0.2.0"
 authors = ["kgv <kgv@users.noreply.github.com>"]
 license = "MIT OR Apache-2.0"
 description = "Crypto literal procedural macros."
@@ -12,8 +12,8 @@ edition = "2018"
 
 [dependencies]
 bincode = "1.2.1"
-crypto-literal-algorithm = "0.1.1"
-crypto-literal-macro = "0.1.1"
+crypto-literal-algorithm = { path = "./algorithm/"}
+crypto-literal-macro = { path = "./macro/" }
 derive_more = "0.99.5"
 serde = "1.0.105"
 

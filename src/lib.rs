@@ -5,8 +5,6 @@
 //! Basic usage:
 //!
 //! ```
-//! # #![feature(proc_macro_hygiene)]
-//! #
 //! # use crypto_literal::encrypt;
 //! #
 //! let crypto_literal = encrypt!("The quick brown fox jumps over the lazy dog");
@@ -15,8 +13,6 @@
 //! Static usage:
 //!
 //! ```
-//! # #![feature(proc_macro_hygiene)]
-//! #
 //! # use crypto_literal::{encrypt, CryptoLiteral};
 //! # use lazy_static::lazy_static;
 //! #
